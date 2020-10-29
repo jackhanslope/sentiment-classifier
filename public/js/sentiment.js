@@ -3,7 +3,7 @@ $(function () {
     let str = 'query='.concat($('#review').val())
 
     $.ajax({
-      url: 'http://127.0.0.1:5000/',
+      url: 'http://127.0.0.1:5000/api/',
       data: str,
       type: 'GET',
       success: function (response) {
