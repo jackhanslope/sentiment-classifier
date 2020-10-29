@@ -1,0 +1,10 @@
+textarea {
+    border: none;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #222;
+    resize: vertical;
+}
+
