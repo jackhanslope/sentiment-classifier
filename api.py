@@ -1,9 +1,11 @@
 from model import NLPModel
 
-from flask import Flask, request
-from flask_restful import Resource, Api, reqparse, abort
+from flask import Flask
+from flask_cors import CORS
+from flask_restful import Resource, Api, reqparse
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 model = NLPModel()
@@ -12,6 +14,7 @@ model.load_clf()
 
 parser = reqparse.RequestParser()
 parser.add_argument('query')
+
 
 # PredictSentiment
 # Predicts the sentiment of an input review
@@ -26,6 +29,7 @@ class PredictSentiment(Resource):
         output = {'prediction': text}
 
         return output
+
 
 api.add_resource(PredictSentiment, '/')
 
