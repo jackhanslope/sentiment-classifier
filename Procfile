@@ -1,1 +1,1 @@
-web funicorn api:app
+web gunicorn api:app
