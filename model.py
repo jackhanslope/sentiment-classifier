@@ -38,3 +38,11 @@ class NLPModel:
     def pickle_clf(self, path='lib/model/clf.pkl'):
         with open(path, 'wb') as f:
             pickle.dump(self.clf, f)
+
+    def load_vectorizer(self, path='lib/model/vectorizer.pkl'):
+        with open(path, 'rb') as f:
+            self.vectorizer = pickle.load(f)
+
+    def load_clf(self, path='lib/model/clf.pkl'):
+        with open(path, 'rb') as f:
+            self.clf = pickle.load(f)
