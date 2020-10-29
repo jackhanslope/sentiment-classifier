@@ -3,8 +3,7 @@ $(function () {
     let str = 'query='.concat($('#review').val())
 
     $.ajax({
-      // TODO: change this url
-      url: 'http://127.0.0.1:5000/api/',
+      url: 'https://jack-sentiment-classifier.herokuapp.com/api/',
       data: str,
       type: 'GET',
       success: function (response) {
