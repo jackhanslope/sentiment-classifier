@@ -34,4 +34,4 @@ class PredictSentiment(Resource):
 api.add_resource(PredictSentiment, '/api/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
