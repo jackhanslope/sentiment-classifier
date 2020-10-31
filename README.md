@@ -1,13 +1,12 @@
+# sentiment-classifier
+This is a basic sentiment classifier using the [scikit-learn](https://scikit-learn.org/stable/) logistic regression classifier. The app can be found at <https://hopeful-cray-7f0234.netlify.app/>.
 
 ## Data
-- https://ai.stanford.edu/~amaas/data/sentiment/
+The data comes from the "Learning Word Vectors for Sentiment Analysis" paper by Mass et al. 2011. More information can be found [here](https://ai.stanford.edu/~amaas/data/sentiment/).
 
-## some useful links
-- https://towardsdatascience.com/deploying-a-machine-learning-model-as-a-rest-api-4a03b865c166
-- https://github.com/mnguyenngo/flask-rest-setup/tree/master/sentiment-clf 
-- https://medium.com/dev-genius/training-an-ml-model-for-sentiment-analysis-in-python-63b6b8c68792
+## Backend
+The api is hosted on Heroku and is accessible at <https://jack-sentiment-classifier.herokuapp.com/api/>. Query the api by sending a GET request with data of the form ``query=<your review>``. The API will respond with either ``{"prediction": "Positive"}`` or ``{"prediction": "Negative"}``.
 
-### Frontend
-- https://netdevops.me/2019/creating-a-bootstrap-based-front-end-for-your-simple-rest-service/#4-hooking-up-the-back-end
-
+## Frontend
+The frontend is built with [skeleton](http://getskeleton.com/) and is hosted on [netlify](https://www.netlify.com/).
 
